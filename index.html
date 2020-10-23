@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Data Struckture And ALgoritma</title>
+  </head>
+
+  <body>
+    <h1>Hello Dude, we are gonna learn Time and Space Complexity</h1>
+    <script>
+      // TIme COmplexity O(n) ini sama dengan Linear Time Complexity
+      function coefficientRule(n) {
+        var count = 0;
+        for (i = 0; i < n; i++) {
+          count += 1;
+        }
+        return count;
+      }
+
+      // Time Complexity f(n) = n + 5
+      // n sama dengan jumlah input
+      // 5 sama dengan data yang di tambahkan merujuk ke garis 28
+      function coefficientRule2(n) {
+        var count = 0;
+        for (i = 0; i < n; i++) {
+          count += 1;
+        }
+        count += 5;
+        return count;
+      }
+
+      // Time Complexity kf(n) = 5f(n) = 5 x n
+      // 5 merupakan perkalian yang di lakukan pada data yang di lakukan di parameter for pad line 36
+      function coefficientRule3(n) {
+        var count = 0;
+        for (i = 0; i < n * 5; i++) {
+          count += 1;
+        }
+        return count;
+      }
+      // Time Coplxity kf(n) = 5f(n) = 5 x n + 4
+      function coefficientRule4(n) {
+        var count = 0;
+        for (i = 0; i < n * 5; i++) {
+          count += 1;
+        }
+        count += 4;
+        return count;
+      }
+
+      console.log(coefficientRule(5));
+      console.log(coefficientRule2(5)); // f(5) = 5 + 5 = 10
+      console.log(coefficientRule3(5)); // kf(5) = 5f(5) = 5  x 5 = 25
+      console.log(coefficientRule4(5)); // kf(5) = 5f(5) = 5 x 5 + 4 = 29
+    </script>
+  </body>
+</html>
